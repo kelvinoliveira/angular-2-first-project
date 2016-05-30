@@ -1,0 +1,6 @@
+# Nodejs & Typescript
+node_modules/
+typings/
+
+# Build
+dist/
