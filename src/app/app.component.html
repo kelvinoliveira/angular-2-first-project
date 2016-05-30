@@ -1,0 +1,21 @@
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <header class="mdl-layout__header">
+        <!-- Title -->
+        <div class="mdl-layout__header-row">
+            <span class="mdl-layout-title">Angular 2 - First App</span>
+        </div>
+        <!-- Tabs -->
+        <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
+            <a [routerLink]="['Home']" class="mdl-layout__tab is-active">Home</a>
+            <a [routerLink]="['Heroes']" class="mdl-layout__tab">Heroes</a>
+            <a [routerLink]="['Villains']" class="mdl-layout__tab">Villains</a>
+        </div>
+    </header>
+    <main class="mdl-layout__content">
+        <section class="mdl-layout__tab-panel is-active">
+            <div class="page-content">
+                <router-outlet></router-outlet>
+            </div>
+        </section>
+    </main>
+</div>
