@@ -6,16 +6,14 @@
         </div>
         <!-- Tabs -->
         <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
-            <a [routerLink]="['Home']" class="mdl-layout__tab is-active">Home</a>
-            <a [routerLink]="['Heroes']" class="mdl-layout__tab">Heroes</a>
-            <a [routerLink]="['Villains']" class="mdl-layout__tab">Villains</a>
+            <a [routerLink]="['Home']" [class.is-active]="_router.isRouteActive(_router.generate(['Home']))" class="mdl-layout__tab">Home</a>
+            <a [routerLink]="['Heroes']" [class.is-active]="_router.isRouteActive(_router.generate(['Heroes']))" class="mdl-layout__tab">Heroes</a>
+            <a [routerLink]="['Villains']" [class.is-active]="_router.isRouteActive(_router.generate(['Villains']))" class="mdl-layout__tab">Villains</a>
         </div>
     </header>
     <main class="mdl-layout__content">
-        <section class="mdl-layout__tab-panel is-active">
-            <div class="page-content">
-                <router-outlet></router-outlet>
-            </div>
-        </section>
+        <div class="page-content">
+            <router-outlet></router-outlet>
+        </div>
     </main>
 </div>

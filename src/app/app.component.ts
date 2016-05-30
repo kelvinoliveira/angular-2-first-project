@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from '@angular/router-deprecated';
+import { Router, RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from '@angular/router-deprecated';
 
 import { HeroesComponent } from './heroes/heroes';
 import { HomeComponent } from './home/home';
@@ -21,6 +21,8 @@ declare var componentHandler: any;
 ])
 
 export class AppComponent implements OnInit { 
+
+    constructor(private _router: Router) {}
     
     ngOnInit(): void {
         componentHandler.upgradeAllRegistered();
