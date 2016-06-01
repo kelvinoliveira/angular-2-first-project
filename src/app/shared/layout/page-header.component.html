@@ -1,0 +1,11 @@
+<!-- Title -->
+<div class="mdl-layout__header-row">
+    <h1 class="mdl-layout-title">Angular 2 - First App</h1>
+</div>
+
+<!-- Tabs -->
+<div class="mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark">
+    <a class="mdl-layout__tab" [routerLink]="['Home']" [class.is-active]="router.isRouteActive(router.generate(['Home']))">Home</a>
+    <a class="mdl-layout__tab" [routerLink]="['Heroes']" [class.is-active]="router.isRouteActive(router.generate(['Heroes']))">Heroes</a>
+    <a class="mdl-layout__tab" [routerLink]="['Villains']" [class.is-active]="router.isRouteActive(router.generate(['Villains']))">Villains</a>
+</div>

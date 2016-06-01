@@ -1,19 +1,13 @@
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-    <header class="mdl-layout__header">
-        <!-- Title -->
-        <div class="mdl-layout__header-row">
-            <span class="mdl-layout-title">Angular 2 - First App</span>
-        </div>
-        <!-- Tabs -->
-        <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
-            <a [routerLink]="['Home']" [class.is-active]="_router.isRouteActive(_router.generate(['Home']))" class="mdl-layout__tab">Home</a>
-            <a [routerLink]="['Heroes']" [class.is-active]="_router.isRouteActive(_router.generate(['Heroes']))" class="mdl-layout__tab">Heroes</a>
-            <a [routerLink]="['Villains']" [class.is-active]="_router.isRouteActive(_router.generate(['Villains']))" class="mdl-layout__tab">Villains</a>
-        </div>
+
+    <header class="mdl-layout__header mdl-layout__header--scroll mdl-color--primary" ko-page-header>
     </header>
+
     <main class="mdl-layout__content">
-        <div class="page-content">
-            <router-outlet></router-outlet>
-        </div>
+        <router-outlet></router-outlet>
     </main>
+
+    <footer class="mdl-mini-footer" ko-page-footer>
+    </footer>
+
 </div>

@@ -1,0 +1,21 @@
+.mdl-app .mdl-layout__header-row {
+    padding: 0;
+    margin: 10px 40px;
+}
+.mdl-app .mdl-layout__tab-bar {
+    padding: 0;
+    padding-left: 16px;
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+}
+.mdl-app .mdl-layout__tab-bar-button {
+    display: none;
+}
+.mdl-app .mdl-mini-footer {
+    padding: 10px 40px;
+    min-height: 36px;
+}
+.mdl-app section.section--center {
+    max-width: 860px;
+}

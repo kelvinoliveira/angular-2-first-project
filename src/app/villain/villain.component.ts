@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { VillainService } from './villain.service';
+import { VillainService } from '../shared/shared';
 
 @Component({
     templateUrl: 'app/villain/villain.component.html'

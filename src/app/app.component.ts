@@ -1,16 +1,21 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from '@angular/router-deprecated';
+import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from '@angular/router-deprecated';
 
-import { HeroComponent, HeroService } from './hero/hero';
+import { HeroComponent } from './hero/hero';
 import { HomeComponent } from './home/home';
-import { VillainComponent, VillainService } from './villain/villain';
+import { VillainComponent } from './villain/villain';
+import { PageHeaderComponent, PageFooterComponent, HeroService, VillainService } from './shared/shared';
 
 declare var componentHandler: any;
 
 @Component({
-    selector: 'my-app',
+    selector: 'ko-app',
     templateUrl: 'app/app.component.html',
-    directives: [ROUTER_DIRECTIVES],
+    directives: [
+        ROUTER_DIRECTIVES,
+        PageHeaderComponent,
+        PageFooterComponent
+    ],
     providers: [
         ROUTER_PROVIDERS,
         HeroService,
@@ -25,8 +30,6 @@ declare var componentHandler: any;
 ])
 
 export class AppComponent implements OnInit {
-
-    constructor(private _router: Router) { }
 
     ngOnInit(): void {
         componentHandler.upgradeAllRegistered();

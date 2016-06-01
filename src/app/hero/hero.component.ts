@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { HeroService } from './hero.service';
+import { HeroService } from '../shared/shared';
 
 @Component({
     templateUrl: 'app/hero/hero.component.html'
