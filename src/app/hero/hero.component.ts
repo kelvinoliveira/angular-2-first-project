@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { HeroService } from '../shared/shared';
+import { HeroService, Hero } from '../shared/shared';
 
 @Component({
     templateUrl: 'app/hero/hero.component.html'
@@ -8,7 +8,7 @@ import { HeroService } from '../shared/shared';
 
 export class HeroComponent { 
     
-    private heroes: Array<any>;
+    private heroes: Array<Hero>;
     
     constructor(private _heroService: HeroService) {
         this.heroes = _heroService.getAll();

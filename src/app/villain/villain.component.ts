@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { VillainService } from '../shared/shared';
+import { VillainService, Villain } from '../shared/shared';
 
 @Component({
     templateUrl: 'app/villain/villain.component.html'
@@ -8,7 +8,7 @@ import { VillainService } from '../shared/shared';
 
 export class VillainComponent { 
     
-    private villains: Array<any>;
+    private villains: Array<Villain>;
     
     constructor(private _villainService: VillainService) {
         this.villains = _villainService.getAll();

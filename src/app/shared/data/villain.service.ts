@@ -1,20 +1,38 @@
 import { Injectable } from '@angular/core';
 
+import { Villain } from './model/model';
+
 @Injectable()
 export class VillainService {
     
-    private villains: Array<any> = [
+    private villains: Array<Villain> = [
         {
-            'ID': 1,
-            'Name': 'Villain 1'
+            'Id': 1,
+            'Name': 'Darkseid',
+            'FullName': 'Uxas',
+            'Powers': ['Omega Effect', 'Superhuman Strength', 'Superhuman Stamina',]
         },
         {
-            'ID': 2,
-            'Name': 'Villain 2'
+            'Id': 2,
+            'Name': 'Joker',
+            'FullName': 'Jack Napier',
+            'Powers': ['Genius-Level Intellect', 'Pain Resistance', 'Indomitable Will']
+        },
+        {
+            'Id': 3,
+            'Name': 'Ultron',
+            'FullName': 'Ultron',
+            'Powers': ['Superhuman Strength', 'Superhuman Speed', 'Superhuman Durability', 'Flight']
+        },
+        {
+            'Id': 4,
+            'Name': 'Red Skull',
+            'FullName': 'Johann Shmidt',
+            'Powers': ['Fine Unarmed Combatant']
         }
     ];
     
-    getAll(): Array<any> {
+    getAll(): Array<Villain> {
         return this.villains;
     }
 }
