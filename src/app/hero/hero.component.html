@@ -1,6 +1,8 @@
 <section class="section--center mdl-grid mdl-grid--no-spacing">
     <div class="mdl-cell mdl-cell--12-col">
         <h3>Heroes</h3>
-        <div>{{ heroes | json }}</div>
+        <ko-data-table [rows]="heroes" [columns]="columns" [show-edit-button]="true" [show-delete-button]="true" (onEdit)="onEdit($event)"
+            (onDelete)="onDelete($event)">
+        </ko-data-table>
     </div>
 </section>

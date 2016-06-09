@@ -1,0 +1,27 @@
+<table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" width="100%">
+    <thead>
+        <tr>
+            <th *ngFor="let column of columns" [class.mdl-data-table__cell--non-numeric]="column.type != 'number'" [width]="column.width">
+                {{ column.header }}
+            </th>
+            <th *ngIf="showActionsColumn">
+                &nbsp;
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let data of rows">
+            <td *ngFor="let column of columns" [class.mdl-data-table__cell--non-numeric]="column.type != 'number'">
+                {{ data[column.field] }}
+            </td>
+            <td *ngIf="showActionsColumn">
+                <button *ngIf="showEditButton" (click)="edit(data)" class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-js-ripple-effect mdl-button--primary">
+                    <i class="material-icons">edit</i>
+                </button>
+                <button *ngIf="showDeleteButton" (click)="delete(data)" class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-js-ripple-effect mdl-button--primary">
+                    <i class="material-icons">delete</i>
+                </button>
+            </td>
+        </tr>
+    </tbody>
+</table>

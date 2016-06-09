@@ -32,6 +32,8 @@ declare var componentHandler: any;
 export class AppComponent implements OnInit {
 
     ngOnInit(): void {
-        componentHandler.upgradeAllRegistered();
+        setTimeout(() => {
+            componentHandler.upgradeAllRegistered();
+        }, 1);
     }
 }
