@@ -35,4 +35,12 @@ export class HeroService {
     getAll(): Array<Hero> {
         return this.heroes;
     }
+
+    getById(id: number): Hero {
+        for (var i = 0; i < this.heroes.length; i++) {
+            var element = this.heroes[i];
+            if (element.Id === id)
+                return element;
+        }
+    }
 }

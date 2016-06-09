@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from '@angular/router-deprecated';
 
-import { HeroComponent } from './hero/hero';
+import { HeroComponent, HeroDetailComponent } from './hero/hero';
 import { HomeComponent } from './home/home';
-import { VillainComponent } from './villain/villain';
+import { VillainComponent, VillainDetailComponent } from './villain/villain';
 import { PageHeaderComponent, PageFooterComponent, HeroService, VillainService } from './shared/shared';
 
 declare var componentHandler: any;
@@ -24,9 +24,11 @@ declare var componentHandler: any;
 })
 
 @RouteConfig([
-    { path: '/heroes', name: 'Heroes', component: HeroComponent },
+    { path: '/hero/list', name: 'Hero', component: HeroComponent },
+    { path: '/hero/detail/:id', name: 'HeroDetail', component: HeroDetailComponent },
     { path: '/home', name: 'Home', component: HomeComponent, useAsDefault: true },
-    { path: '/villains', name: 'Villains', component: VillainComponent },
+    { path: '/villain/list', name: 'Villain', component: VillainComponent },
+    { path: '/villain/detail/:id', name: 'VillainDetail', component: VillainDetailComponent },
 ])
 
 export class AppComponent implements OnInit {

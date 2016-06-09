@@ -1,6 +1,13 @@
-<section class="section--center mdl-grid mdl-grid--no-spacing">
+<section class="section--center mdl-grid">
     <div class="mdl-cell mdl-cell--12-col">
         <h3>Villains</h3>
+    </div>
+    <div class="mdl-cell mdl-cell--12-col">
+        <button (click)="new()" class="mdl-button mdl-js-button mdl-button--raised mdl-button--primary">
+            New
+        </button>
+    </div>
+    <div class="mdl-cell mdl-cell--12-col">
         <ko-data-table [rows]="villains" [columns]="columns" [show-edit-button]="true" [show-delete-button]="true" (onEdit)="onEdit($event)"
             (onDelete)="onDelete($event)">
         </ko-data-table>

@@ -19,10 +19,6 @@ export class DataTableComponent implements OnInit {
     @Output() onDelete = new EventEmitter<any>();
     showActionsColumn: boolean;
 
-    constructor() {
-        this.showActionsColumn = false;
-    }
-
     edit(data: any) {
         this.onEdit.emit(data);
     }

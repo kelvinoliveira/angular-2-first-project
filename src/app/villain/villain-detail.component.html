@@ -1,0 +1,35 @@
+<section class="section--center mdl-grid">
+    <div class="mdl-cell mdl-cell--12-col">
+        <h3>Villain Detail</h3>
+    </div>
+    <div class="mdl-cell mdl-cell--12-col">
+        <button (click)="save()" class="mdl-button mdl-js-button mdl-button--raised mdl-button--primary">
+            Save
+        </button>
+        <button (click)="cancel()" class="mdl-button mdl-js-button mdl-button--raised mdl-button--primary">
+            Cancel
+        </button>
+    </div>
+    <div class="mdl-cell mdl-cell--12-col">
+        <div class="mdl-grid mdl-grid--no-spacing">
+            <div class="mdl-cell mdl-cell--12-col">
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <input class="mdl-textfield__input" type="text" id="user" [(ngModel)]="villain.Id">
+                    <label class="mdl-textfield__label" for="user">Id</label>
+                </div>
+            </div>
+            <div class="mdl-cell mdl-cell--6-col">
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <input class="mdl-textfield__input" type="text" id="user" [(ngModel)]="villain.Name">
+                    <label class="mdl-textfield__label" for="user">Name</label>
+                </div>
+            </div>
+            <div class="mdl-cell mdl-cell--6-col">
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <input class="mdl-textfield__input" type="text" id="user" [(ngModel)]="villain.FullName">
+                    <label class="mdl-textfield__label" for="user">Full name</label>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router-deprecated';
 
 import { DataTableColumn, DataTableComponent, VillainService, Villain } from '../shared/shared';
 
@@ -7,24 +8,32 @@ import { DataTableColumn, DataTableComponent, VillainService, Villain } from '..
     directives: [DataTableComponent]
 })
 
-export class VillainComponent {
+export class VillainComponent implements OnInit {
 
     private villains: Array<Villain>;
     private columns: Array<DataTableColumn> = [
         { header: 'Id', field: 'Id', type: 'number', width: '10%' },
-        { header: 'Name', field: 'Name', type: 'string' },
-        { header: 'Full Name', field: 'FullName', type: 'string' }
+        { header: 'Name', field: 'Name', type: 'string', width: '' },
+        { header: 'Full Name', field: 'FullName', type: 'string', width: '' }
     ];
 
-    constructor(private _villainService: VillainService) {
-        this.villains = _villainService.getAll();
+    constructor(
+        private villainService: VillainService,
+        private router: Router) { }
+
+    ngOnInit() {
+        this.villains = this.villainService.getAll();
     }
 
     onEdit(data: Villain): void {
-        console.log('Edit', data.Id);
+        this.router.navigate(['VillainDetail', { id: data.Id }]);
     }
 
     onDelete(data: Villain): void {
         console.log('Delete', data.Id);
+    }
+
+    new() {
+        console.log('New');
     }
 }
